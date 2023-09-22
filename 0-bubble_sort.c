@@ -1,7 +1,5 @@
 #include "sort.h"
 
-void swap_items(int *array_item1, int *array_item2);
-
 /**
  * bubble_sort - sorts a list using the bubble sort algorithm
  * @array: pointer to the array
