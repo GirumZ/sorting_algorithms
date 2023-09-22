@@ -31,6 +31,13 @@ void insertion_sort_list(listint_t **list)
 	}
 }
 
+/**
+ * swap_nodes - iinterchanges two nodes
+ * @h: pointer to the head of the list
+ * @node_1: pointer to the first node
+ * @node_2: pointer to the first node
+ */
+
 void swap_nodes(listint_t **h, listint_t **node_1, listint_t **node_2)
 {
 	listint_t *n, *m;
