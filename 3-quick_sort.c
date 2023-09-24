@@ -2,17 +2,17 @@
 
 /**
  * swap_items - swaps two items in an array
- * @item_1: the first item
- * @item_2: the second item
+ * @array_item1: the first item
+ * @array_item2: the second item
  */
 
 void swap_items(int *array_item1, int *array_item2)
 {
-        int tmp;
+	int tmp;
 
-        tmp = *array_item1;
-        *array_item1 = *array_item2;
-        *array_item2 = tmp;
+	tmp = *array_item1;
+	*array_item1 = *array_item2;
+	*array_item2 = tmp;
 }
 
 
@@ -28,18 +28,18 @@ void swap_items(int *array_item1, int *array_item2)
 
 int lomuto_partition(int *array, size_t size, int lb, int ub)
 {
-        int start, itr;
-        int *pivot;
+	int start, itr;
+	int *pivot;
 
-        pivot = &array[ub];
-        for (start = itr = lb; itr < ub; itr++)
-        {
-                if (array[itr] < *pivot)
-                {
-                        if (start < itr)
-                        {
-                                swap_items(&array[itr], &array[start]);
-                                print_array(array, size);
+	pivot = &array[ub];
+	for (start = itr = lb; itr < ub; itr++)
+	{
+		if (array[itr] < *pivot)
+		{
+			if (start < itr)
+			{
+				swap_items(&array[itr], &array[start]);
+				print_array(array, size);
 			}
 			start++;
 		}
@@ -83,9 +83,9 @@ void lomuto_sort(int *array, size_t size, int lb, int ub)
 
 void quick_sort(int *array, size_t size)
 {
-        if (array == NULL || size < 2)
-                return;
+	if (array == NULL || size < 2)
+		return;
 
-        lomuto_sort(array, size, 0, size - 1);
+	lomuto_sort(array, size, 0, size - 1);
 }
 
